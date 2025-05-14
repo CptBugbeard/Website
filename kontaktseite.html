@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmileTech Nexus - Kontaktformular</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .left,
+        .right {
+            flex: 1 1 300px;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 0.5rem 0;
+            margin-top: 0.2rem;
+            border: none;
+            border-bottom: 2px solid #00aaff;
+            background-color: transparent;
+            color: white;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-bottom: 2px solid #00ccff;
+        }
+
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 1rem;
+        }
+
+        .hidden-field {
+            margin-top: 1rem;
+            color: #aaa;
+        }
+
+        input[type="submit"] {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            border: 1px solid #00aaff;
+            color: #00aaff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00aaff;
+            color: black;
+        }
+
+        a {
+            color: #00aaff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kontakt</h1>
+    <div class="container">
+        <div class="right">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="nachricht">Nachricht</label>
+                <textarea id="nachricht" name="nachricht" placeholder="Nachricht"></textarea>
+
+                <label><strong>Datenschutz</strong></label>
+                <input type="checkbox" id="datenschutz" name="datenschutz" required>
+                <label for="datenschutz">Hiermit stimme ich der Übermittlung und Verarbeitung meiner Daten gemäß der
+                    <a href="datenschutz.html">Datenschutzerklärung</a> zu.</label>
+
+                <div class="hidden-field">
+                    Falls Sie ein Mensch sind und dieses Feld sehen, dann lassen Sie es bitte leer.<br>
+                    <input type="text" name="botcheck">
+                </div>
+
+                <input type="submit" value="Absenden">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
